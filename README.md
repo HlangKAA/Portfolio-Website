@@ -1,193 +1,141 @@
-# Portfolio Website
 <div align="center">
-  <pre>
-    _____           _    __      _ _       
-   |  __ \         | |  / _|    | (_)      
-   | |__) |__  _ __| |_| |_ ___ | |_  ___  
-   |  ___/ _ \| '__| __|  _/ _ \| | |/ _ \ 
-   | |  | (_) | |  | |_| || (_) | | | (_) |
-   |_|   \___/|_|   \__|_| \___/|_|_|\___/ 
-  </pre>
+
+# ✨ Portfolio Website
+
+**My personal portfolio showcasing skills, projects, leadership, and education**
+
+Built with **React**, **Vite**, **Tailwind CSS** & **Framer Motion**
+
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+
 </div>
 
- 
-Welcome to my **portfolio website**! This site showcases my skills, experience, education, projects, and how to get in touch with me. It's built with **React** and **Vite** for a fast, modern web experience. You can explore my work, learn about my journey, and contact me directly.
-
 ---
 
-## Demo
+## 📋 Overview
 
-![Portfolio Demo](https://i.postimg.cc/Dfr5jCQp/Screenshot-2025-01-02-120901.png)
+A modern, responsive portfolio website with smooth animations, interactive UI elements, and a clean design. Features scroll-triggered animations, stacked project cards, smooth page transitions, and a polished dark theme.
 
----
+## ✨ Features
 
-## Live Preview
+| Feature | Description |
+|---------|-------------|
+| 🌑 **Dark Theme** | Sleek dark-mode design with accent colors |
+| 🎞️ **Smooth Animations** | Scroll-triggered animations powered by Framer Motion |
+| 📱 **Fully Responsive** | Optimized for mobile, tablet, and desktop |
+| 🃏 **Stacked Project Cards** | Parallax scroll-based project showcase |
+| ☁️ **3D Icon Cloud** | Interactive tech stack visualization |
+| ✨ **Sparkle Effects** | Dynamic text sparkle and meteor animations |
+| 🔗 **Multi-page Routing** | Client-side routing with React Router |
+| ⚡ **Smooth Scrolling** | Lenis smooth scroll integration |
+| 🖥️ **Code Preview** | Syntax-highlighted code snippet on Hero |
 
-Check out the live preview of the portfolio website here:  
-[**Live Demo**](https://codervai.vercel.app/)
----
-### 🎯 Project Structure
-```bash
-portfolio/
-├── node_modules/
-├── public/
+## 📄 Pages
+
+| Page | Route | Description |
+|------|-------|-------------|
+| **Hero / About** | `/` | Introduction, about me, and code preview |
+| **Skills** | `/skills` | Tech stack with interactive icon cloud |
+| **Leadership** | `/leadership` | Leadership activities and experiences |
+| **Education** | `/education` | Academic background |
+| **Projects** | `/projects` | Featured projects with stacked card design |
+| **Contact** | `/contact` | Contact information and links |
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|-----------|
+| **Framework** | React 18 |
+| **Build Tool** | Vite 7 |
+| **Styling** | Tailwind CSS 4 |
+| **Animation** | Framer Motion |
+| **Routing** | React Router v7 |
+| **Smooth Scroll** | Lenis |
+| **Icons** | React Icons, Lucide React |
+| **UI Components** | Radix UI (Tooltip, Slot) |
+| **Code Highlight** | Prism.js |
+| **Deployment** | Vercel |
+
+## 📂 Project Structure
+
+```
+Portfolio-Website/
 ├── src/
-│   ├── assets/
-│   │   ├── css/
-│   │   │   ├── index.css
-│   │   │   └── tomorrow.css
-│   │   └── images/
-│   ├── components/
-│   │   ├── ui/
-│   │   │   ├── Reusable Components/
-│   │   │   │   ├── badge.jsx
-│   │   │   │   ├── button.jsx
-│   │   │   │   ├── card.jsx
-│   │   │   │   ├── EducationLoader.jsx
-│   │   │   │   ├── evervault-card.jsx
-│   │   │   │   ├── flip-words.jsx
-│   │   │   │   ├── icon-cloud.jsx
-│   │   │   │   ├── meteors.jsx
-│   │   │   │   ├── sparkles-text.jsx
-│   │   │   │   └── tooltip.jsx
-│   │   │   │
-│   │   │   ├── Main Components/
-│   │   │   │   ├── AnimatedGrid.jsx
-│   │   │   │   ├── Contact.jsx
-│   │   │   │   ├── Education.jsx
-│   │   │   │   ├── enhanced-portfolio-card.jsx
-│   │   │   │   ├── Experience.jsx
-│   │   │   │   ├── global.jsx
-│   │   │   │   ├── Header.jsx
-│   │   │   │   ├── Hero.jsx
-│   │   │   │   ├── Home.jsx
-│   │   │   │   ├── PortfolioPage.jsx
-│   │   │   │   ├── Projects.jsx
-│   │   │   │   └── Skills.jsx
-│   │   └── lib/
-│   │       └── utils.js
 │   ├── pages/
-│   │   ├── About/
-│   │   │   └── About.jsx
-│   │   ├── Contact/
-│   │   │   └── Contact.jsx
-│   │   ├── Experience/
-│   │   │   └── Experience.jsx
-│   │   ├── Header/
-│   │   │   └── Header.jsx
-│   │   ├── Hero/
-│   │   │   └── Hero.jsx
-│   │   ├── Projects/
-│   │   │   ├── Projects.jsx
-│   │   │   └── testProjects.jsx
-│   │   └── Skills/
-│   │       └── Skills.jsx
-│   ├── App.jsx
-│   └── main.jsx
-├── Configuration Files/
-│   ├── .eslintrc.js
-│   ├── .gitignore
-│   ├── components.json
-│   ├── index.html
-│   ├── jsconfig.json
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── README.md
-│   ├── tailwind.config.js
-│   ├── vercel.json
-│   └── vite.config.js
-
-```
----
-
-## Sections of the Portfolio
-
-The portfolio website consists of the following sections:
-
-- **Home**: Introduction and a brief overview.
-- **Skills**: A detailed list of my technical skills.
-- **Experience**: My professional journey and work experience.
-- **Education**: Academic background and certifications.
-- **Projects**: A showcase of the projects I've worked on.
-- **Contact**: Information on how to reach out to me.
-
----
-
-## 💻 Technologies Used
-- **Frontend:** React.js with Vite
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-- **Icons:** React Icons
-- **Deployment:** Vercel
-
----
-
-## Installation ⬇️
-
-You will need to download **Git** and **Node** to run this project.
-
-### Git
-
-- Download and install Git from the official website: [Git Downloads](https://git-scm.com/)
-- Verify the installation:
-  ```bash
-  git --version
-  ```
-
-### Node
-
-- Download and install Node.js from the official website: [Node.js Downloads](https://nodejs.org/)
-- Make sure you have the latest version of both Git and Node on your computer.
-- Verify the installation:
-  ```bash
-  node --version
-  ```
-
-# Getting Started 🎯
-
-### Fork and Clone the Repository 🚀
-1. Click the **Fork** button at the top-right corner of the page to create your own copy of the repository.
-2. After forking, open your terminal and run the following commands to clone the repo:
-
-  ```bash
-  git clone https://github.com/seraprogrammer/portfolio.git
-  ```
-Navigate to the Project Directory 📂
-Once the repository is cloned, change your directory to the project folder:
-```bash
-cd portfolio
+│   │   ├── Hero/Hero.jsx              # Hero section + About
+│   │   ├── About/About.jsx            # About me details
+│   │   ├── Skills/Skills.jsx          # Skills & tech stack
+│   │   ├── Experience/Experience.jsx  # Leadership activities
+│   │   ├── Education/Education.jsx    # Education background
+│   │   ├── Projects/Projects.jsx      # Project showcase
+│   │   ├── Contact/Contact.jsx        # Contact info
+│   │   └── Header/Header.jsx         # Navigation header
+│   ├── components/
+│   │   ├── ui/                        # Reusable UI components
+│   │   │   ├── sparkles-text.jsx
+│   │   │   ├── flip-words.jsx
+│   │   │   ├── meteors.jsx
+│   │   │   ├── icon-cloud.jsx
+│   │   │   └── ...
+│   │   ├── enhanced-portfolio-card.jsx
+│   │   ├── AnimatedGrid.jsx
+│   │   └── globe.jsx
+│   ├── lib/utils.js
+│   ├── assets/css/
+│   ├── App.jsx                        # Main app with routing
+│   └── main.jsx                       # Entry point
+├── public/
+├── tailwind.config.js
+├── vite.config.js
+├── vercel.json
+└── package.json
 ```
 
-Install Dependencies ⚙️
-From the root directory of your project, install the necessary packages:
+## 🚀 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) 18+ LTS
+- [Git](https://git-scm.com/)
+
+### Installation
+
 ```bash
+# Clone the repository
+git clone https://github.com/HlangKAA/Portfolio-Website.git
+cd Portfolio-Website
+
+# Install dependencies
 npm install
-```
 
-Run the Development Server 🚀
-Start the development server to see your project live:
-```bash
+# Start development server
 npm run dev
 ```
 
-View the Project 🌐
-Open your browser and visit http://localhost:5173/ to see the result! 🎉
+Open your browser and visit **http://localhost:5173/** 🎉
 
-## 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+### Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## 🌐 Deployment
+
+This project is deployed on **Vercel**. Push to `main` branch to trigger auto-deployment.
+
+## 📄 License
+
+This project is for personal use.
 
 ---
 
-### 🤝 Contributing
+<div align="center">
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+**Made with ❤️ by HlangKAA**
 
----
-
-<div align="center"> Made with ❤️ by Nazmul Hossain </div>
-
+</div>
