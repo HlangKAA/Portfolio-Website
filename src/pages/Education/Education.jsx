@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import EducationLoader from "@/components/ui/EducationLoader";
 import {
-  Star,
-  Award,
   Calendar,
   BookOpen,
   GraduationCap,
-  Trophy,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -15,24 +11,24 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
+      degree: "B.Sc. in Computer Science",
+      school: "Kasetsart University, Kamphaeng Saen Campus",
+      mascot: "🎓",
+      year: "2023 – Present",
+      achievements: ["GPA: 3.43"],
+      skills: ["AI / ML", "Computer Vision", "Game Development", "Web Development"],
+      description:
+        "Studying Computer Science with focus on Artificial Intelligence, Computer Vision, and Software Development. Active in international student programs.",
+    },
+    {
+      degree: "Science & Mathematics Program",
+      school: "Princess Chulabhorn Science High School Phetchaburi",
+      mascot: "🔬",
+      year: "2020 – 2022",
+      achievements: ["GPA: 3.19"],
       skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
       description:
         "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
-    },
-    {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
-      description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
     },
   ];
 
@@ -74,12 +70,11 @@ const EducationSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
-            Educational Journey
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent mb-6">
+            Education
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover how academic excellence shapes innovative thinking and
-            professional growth.
+            My academic journey in science and technology.
           </p>
         </motion.div>
 
@@ -95,8 +90,8 @@ const EducationSection = () => {
               variants={cardVariants}
               className={`relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${
                 hoveredIndex === index
-                  ? "border-teal-500 scale-[1.02]"
-                  : "border-blue-400/20"
+                  ? "border-purple-500 scale-[1.02]"
+                  : "border-purple-400/20"
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -110,7 +105,7 @@ const EducationSection = () => {
                     </h3>
                   </div>
                   <p className="text-lg text-gray-300 flex items-center gap-2">
-                    <BookOpen className="w-5 h-5 text-teal-500" />
+                    <BookOpen className="w-5 h-5 text-purple-500" />
                     {edu.school}
                   </p>
                   <p className="text-gray-400 flex items-center gap-2">
@@ -119,22 +114,22 @@ const EducationSection = () => {
                   </p>
                 </div>
 
-                <p className="text-gray-300 text-sm italic border-l-2 border-teal-500 pl-3">
+                <p className="text-gray-300 text-sm italic border-l-2 border-purple-500 pl-3">
                   {edu.description}
                 </p>
 
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-white flex items-center gap-2">
-                    <Trophy className="w-4 h-4 text-yellow-500" />
-                    Key Achievements
+                    <GraduationCap className="w-4 h-4 text-violet-400" />
+                    Academic Performance
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {edu.achievements.map((achievement, i) => (
                       <div
                         key={i}
-                        className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 flex items-center gap-2 text-sm"
+                        className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 flex items-center gap-2 text-sm"
                       >
-                        <Award className="w-4 h-4" />
+                        <GraduationCap className="w-4 h-4" />
                         <span>{achievement}</span>
                       </div>
                     ))}
@@ -145,7 +140,7 @@ const EducationSection = () => {
                   {edu.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
+                      className="px-2 py-1 text-xs rounded bg-violet-500/10 text-violet-300"
                     >
                       {skill}
                     </span>

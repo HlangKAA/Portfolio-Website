@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../../tailwind.config.js";
 
 @keyframes float-slow {
   0%,
@@ -25,7 +24,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #60a5fa, #34d399, #60a5fa);
+  background: linear-gradient(90deg, #a855f7, #6366f1, #a855f7);
   background-size: 200% auto;
   animation: gradient-shift 4s linear infinite;
   -webkit-background-clip: text;
@@ -34,7 +33,7 @@
 
 .gradient-border {
   position: relative;
-  background: linear-gradient(45deg, #60a5fa, #34d399);
+  background: linear-gradient(45deg, #a855f7, #6366f1);
   padding: 2px;
   border-radius: 0.75rem;
 }
